@@ -2,7 +2,7 @@
 
 [![license][license]][localLicense]
 
-This Polyglot node server connects an MQTT broker to the ISY via Polyglot v3 (PG3x).
+Polyglot V3 NodeServer for **EISY** or **Polisy** that bridges an MQTT broker to ISY. It discovers devices from inline JSON (**devlist**) or a YAML device file (**devfile**) and creates ISY nodes for Tasmota switches, dimmers, fans, flags, and energy monitors; Tasmota and other sensors (DHT, DS18B20, BME280, analog, distance); Shelly Flood, ratgdo garage doors, RGBW strips, Droplet flow sensors; and custom raw or multi-sensor nodes. Device state is published to ISY status drivers; commands are sent to MQTT command topics for use in programs and scenes.
 
 ## Installation
 
