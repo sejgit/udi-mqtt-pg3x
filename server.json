@@ -8,7 +8,14 @@
     "shortPoll": "60",
     "longPoll": "300",
     "logLevel": "INFO",
-    "customParams": {},
+    "customParams": {
+        "devlist": "[ {\"id\": \"sonoff1\", \"type\": \"switch\", \"status_topic\": \"stat/sonoff1/POWER\", \"cmd_topic\": \"cmnd/sonoff1/power\"} ]",
+        "devfile": "mqtt-devices.yaml",
+        "mqtt_server": "localhost",
+        "mqtt_port": "1884",
+        "mqtt_user": "admin",
+        "mqtt_password": "admin"
+    },
     "credits": [
         {
             "title": "MQTT NodeServer",

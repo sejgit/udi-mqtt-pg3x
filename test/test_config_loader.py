@@ -18,6 +18,9 @@ class TestResolveDevfilePath:
         assert config_loader.resolve_devfile_path(
             "data/mqtt-devices.yaml"
         ) == Path("data/mqtt-devices.yaml")
+        assert config_loader.resolve_devfile_path(
+            "mqtt-devices.yaml"
+        ) == Path("data/mqtt-devices.yaml")
 
     def test_absolute_path_preserved(self):
         abs_path = "/usr/home/admin/mqtt/virtualconfig.yaml"
