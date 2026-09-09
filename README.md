@@ -1,14 +1,14 @@
-# UDI Polyglot PG3x MQTT Poly
+# MQTT Plugin
 
 [![license][license]][localLicense]
 
-Polyglot V3 NodeServer for **EISY** or **Polisy** that bridges an MQTT broker to ISY. It discovers devices from inline JSON (**devlist**) or a YAML device file (**devfile**) and creates ISY nodes for Tasmota switches, dimmers, fans, flags, and energy monitors; Tasmota and other sensors (DHT, DS18B20, BME280, analog, distance); Shelly Flood, ratgdo garage doors, RGBW strips, Droplet flow sensors; and custom raw or multi-sensor nodes. Device state is published to ISY status drivers; commands are sent to MQTT command topics for use in programs and scenes.
+Plugin for **EISY/Polisy** (eisy-ui or PG3 environment) that bridges an MQTT broker to ISY. It discovers devices from inline JSON (**devlist**) or a YAML device file (**devfile**) and creates ISY nodes for Tasmota switches, dimmers, fans, flags, and energy monitors; Tasmota and other sensors (DHT, DS18B20, BME280, analog, distance); Shelly Flood, ratgdo garage doors, RGBW strips, Droplet flow sensors; and custom raw or multi-sensor nodes. Device state is published to ISY status drivers; commands are sent to MQTT command topics for use in programs and scenes.
 
 ## Installation
 
-Install from the Polyglot store. After install, open this node server's **Configuration** page for setup instructions.
+Install from the Plugin Store in eisy-ui or PG3. After install, open this plugin's **Configuration** page for setup instructions.
 
-For a few devices you can use inline JSON; for larger installs the node server supports an external YAML device file in its `data/` folder.
+For a few devices you can use inline JSON; for larger installs the plugin supports an external YAML device file in its `data/` folder.
 
 ## Supported devices
 
