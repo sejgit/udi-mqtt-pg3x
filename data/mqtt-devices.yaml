@@ -1,7 +1,7 @@
 # MQTT device configuration for udi-mqtt-pg3x
 #
 # Upload: zip this file (at the root of the zip) via Configuration → Upload file.
-# It will be extracted to the data/ folder. Set devfile to: data/mqtt-devices.yaml
+# It will be extracted to the data/ folder. Set devfile to: mqtt-devices.yaml
 #
 # Edit topics and ids to match your devices, save, then run Discover on the MQTT controller.
 

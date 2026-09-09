@@ -43,9 +43,7 @@ def resolve_devfile_path(filename: str) -> Path:
     path = Path(filename.strip())
     if path.is_absolute():
         return path
-    if len(path.parts) == 1:
-        return Path("data") / path.name
-    return path
+    return Path("data") / path.name
 
 
 def wants_devfile(controller) -> bool:

@@ -56,23 +56,25 @@ A starter file ships with this node server at `data/mqtt-devices.yaml`.
 1. Copy or edit `data/mqtt-devices.yaml` (from the node server install, or from the project repository).
 2. Create a **zip** containing `mqtt-devices.yaml` at the **root** of the archive (not inside an extra folder).
 3. On this Configuration page, use **Upload file**. PG3 extracts the zip into the **`data/`** folder (relative to this node server).
-4. Set Custom Parameter **devfile** to:
+4. Set Custom Parameter **devfile** to the **filename only** (loads from this node server's `data/` folder):
 
    ```text
-   data/mqtt-devices.yaml
+   mqtt-devices.yaml
    ```
 
 5. Save parameters, then run **Discover** on the MQTT controller node.
 
 To update later: edit the YAML, zip, upload again, save, **Discover**.
 
-### Option B — SSH or your own folder
+### Option B — SSH (advanced)
 
-1. Place your YAML anywhere on the eISY that the node server can read.
-2. Set **devfile** to the **full path** (for example `/home/admin/mqtt/mqtt-devices.yaml`).
+Prefer **Option A** on eisy-ui: files outside the node server directory may hit permission errors.
+
+1. Place your YAML in this node server's **`data/`** folder (or upload via Option A).
+2. Set **devfile** to the **filename only** (for example `mqtt-devices.yaml`).
 3. Save parameters, then run **Discover**.
 
-Relative paths (such as `data/mqtt-devices.yaml`) are resolved from this node server's install folder.
+A bare filename always resolves to `data/<filename>` under this node server's install folder. Absolute paths are supported but not recommended on eisy-ui.
 
 ### devfile example — one Tasmota board, many sensors
 
@@ -124,7 +126,7 @@ The Tasmota topic prefix (`Wemos32`) is the same for all devices on that board. 
 
 ```text
 ## REQUIRED (at least one)
-devfile  - path to YAML device file (recommended: data/mqtt-devices.yaml)
+devfile  - YAML filename in data/ (recommended: mqtt-devices.yaml)
 devlist  - JSON array or single device object (see Quick start)
 
 ## devfile + devlist together
@@ -238,7 +240,7 @@ A single JSON object (not an array) still updates one device by **id**:
 
 ### Troubleshooting
 
-- **Discovery failed / file not found** — Check **devfile** path; for uploads use `data/mqtt-devices.yaml`.
+- **Discovery failed / file not found** — Check **devfile** is the filename only (e.g. `mqtt-devices.yaml`); file must be in `data/`.
 - **Invalid YAML** — Validate indentation; `devices:` must be present.
 - **No nodes after Discover** — Confirm at least one of **devlist** or **devfile** is set and topics match your broker.
 
